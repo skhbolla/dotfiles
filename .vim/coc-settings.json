@@ -1,0 +1,4 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["c", "cpp", "objc", "objcpp"],
+  "clangd.format.fallbackStyle": "Google"
+}

@@ -2,7 +2,6 @@
 set nocompatible
 filetype plugin indent on
 syntax on
-set mouse=a
 
 " --- Plugins (vim-plug) ---
 call plug#begin('~/.vim/plugged')
@@ -41,6 +40,8 @@ set tabstop=4                   " Tab width
 set signcolumn=yes              " Always show sign column (for CoC icons)
 set ignorecase smartcase        " Search intelligence
 set termguicolors               " High-color support
+set foldmethod=syntax
+set foldlevelstart=999
 
 " --- Colorscheme Configuration ---
   
@@ -53,8 +54,11 @@ colorscheme sonokai
 " Airline
 let g:airline_theme = 'sonokai'
 
-" --- Keybindings (The Standard) ---
+" --- Keybindings ---
 let mapleader = " "
+
+" Rebinding Esc to Normal mode
+tnoremap <Esc> <C-\><C-n>
 
 " File Navigation (NERDTree)
 nnoremap <C-n> :NERDTreeToggle<CR>

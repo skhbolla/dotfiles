@@ -1,4 +1,23 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["c", "cpp", "objc", "objcpp"],
-  "clangd.format.fallbackStyle": "Google"
+    // 1. Fix: Use the modern formatOnSave structure
+    "coc.preferences.formatOnSave": true,
+    // 2. Fix: Clangd settings moved to 'initializationOptions' or direct keys
+    "clangd.arguments": [
+        "--clang-tidy",
+        "--completion-style=detailed",
+        "--header-insertion=never",
+        "--fallback-style=Google"
+    ],
+    // 3. Fix: Diagnostic UI settings
+    "diagnostic.virtualText": true,
+    "diagnostic.errorSign": "✘",
+    "diagnostic.warningSign": "⚠",
+    // Python (Pyright) 
+    "python.analysis.typeCheckingMode": "basic",
+    // Go (gopls) 
+    "go.goplsOptions": {
+        "staticcheck": true,
+        "completeUnimported": true,
+        "usePlaceholders": true
+    }
 }

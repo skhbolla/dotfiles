@@ -6,7 +6,6 @@ filetype plugin indent on
 syntax on
 
 let mapleader = " "
-
 " ============================================================================
 " 2. PLUGIN MANAGEMENT (Vim-Plug)
 " ============================================================================
@@ -72,7 +71,6 @@ augroup LanguageOverrides
   autocmd!
   " Go Language Rules (Strict physical tabs + auto-organize imports on save)
   autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
-  autocmd BufWritePre *.go call CocAction('runCommand', 'editor.action.organizeImport')
 augroup END
 
 " ============================================================================
@@ -118,9 +116,9 @@ nnoremap <silent> <leader>t :FloatermToggle<CR>
 tnoremap <silent> <leader>t <C-\><C-n>:FloatermToggle<CR>
 
 " Fuzzy Finder Navigation
-nnoremap <leader>f :Files<CR>     " Search files in project
-nnoremap <leader>b :Buffers<CR>   " Search open tabs/buffers
-nnoremap <leader>g :Rg<CR>        " Codebase Search (Requires 'ripgrep' installed on OS)
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>g :Rg<CR>
 
 " ============================================================================
 " 7. COC.NVIM / LSP CONFIGURATION & MAPPINGS
